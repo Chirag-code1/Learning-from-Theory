@@ -1,0 +1,32 @@
+So, today i learnt about React setState Hook, what is it's use and how can we use it.
+
+setState is a Hook provided by react which let's you update or change the state of things you have kept in your 'state'.
+Let's understand it with an example in which we will create a botton and will display a number above it. With every click on that button, 
+the value of that number will increase by 1.
+
+Firstly, we will create basic structure of react component. (shortcut in vs.code:   rafce = react arrow function component export).
+Secondly, create heading in which we will display the number and a button also.
+
+
+import React, {useState} from 'react'
+
+const App = () => {
+
+  const [count, setCount ] = useState(0);  // setState returns an aray as ===  [current value/function, updated value/function]
+  const state= useState(); 
+  let count=0;
+
+  const IncNumber =() => {
+    setCount(count+1);
+    window.log("Count Updated by 1")
+  }
+
+  return (
+    <>
+      <h1>{count}</h1> 
+      <button onClick={IncNumber}>Click me!</button>
+    </>
+  )
+}
+
+export default App
